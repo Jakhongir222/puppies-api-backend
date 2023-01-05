@@ -1,7 +1,8 @@
 
 ## Puppies API backend with Spring boot
 
-In this exercise you will create a puppy API with Spring boot. Here is the link for the front end of this app 
+In this exercise you will create a puppy API with Spring boot. Here is the link for the front end of this [app](https://github.com/Jakhongir222/puppies-api-frontend.git)
+ 
 
 ### The task
 
