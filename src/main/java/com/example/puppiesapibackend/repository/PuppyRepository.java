@@ -15,7 +15,7 @@ public class PuppyRepository {
         return repo.findAll();
     }
 
-    public Object getSpecificPuppy(long puppyId) {
+    public Object getSpecificPuppy(Long puppyId) {
         return repo.findById(puppyId);
     }
 
@@ -24,11 +24,12 @@ public class PuppyRepository {
         return repo.save(puppies);
     }
 
-    public void deletePuppy(long puppyId) {
+    public void deletePuppy(Long puppyId) {
         repo.deleteById(puppyId);
     }
 
-    public Object save(Puppies updatePuppy) {
-        return repo.save(updatePuppy);
+
+    public void save(Puppies puppy) {
+        repo.save(puppy);
     }
 }

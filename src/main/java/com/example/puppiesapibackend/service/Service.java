@@ -6,7 +6,7 @@ import com.example.puppiesapibackend.model.Puppies;
 import com.example.puppiesapibackend.repository.PuppyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Optional;
+
 
 @org.springframework.stereotype.Service
 public class Service {
@@ -18,7 +18,7 @@ public class Service {
         return repo.getAllPuppies();
     }
 
-    public Object getSpecificPuppy(long puppyId) {
+    public Object getSpecificPuppy(Long puppyId) {
         return repo.getSpecificPuppy(puppyId);
     }
 
@@ -26,18 +26,11 @@ public class Service {
         return repo.createPuppy(new Puppies(puppyDTO.puppyBreed(), puppyDTO.puppyName(), puppyDTO.puppyBirthday()));
     }
 
-    public void updatePuppy(long puppyId, PuppyDTO puppyDTO) {
-        Optional<?> existingPuppy = (Optional<?>) repo.getSpecificPuppy(puppyId);
-        if(existingPuppy.isPresent()){
-            Puppies updatePuppy = new Puppies(puppyDTO.puppyBreed(), puppyDTO.puppyName(), puppyDTO.puppyBirthday());
-            repo.save(updatePuppy);
-        }else{
-            throw new RuntimeException("Puppy not found");
-        }
-    }
-
-    public void deletePuppy(long puppyId) {
+    public void deletePuppy(Long puppyId) {
          repo.deletePuppy(puppyId);
     }
 
+    public void updatePuppy(Puppies puppy) {
+        repo.save(puppy);
+    }
 }
