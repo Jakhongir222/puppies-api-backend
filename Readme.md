@@ -1,5 +1,5 @@
 
-## Puppies API with Spring boot
+## Puppies API backend with Spring boot
 
 In this exercise you will create a puppy API with Spring boot. 
 
