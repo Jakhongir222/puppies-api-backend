@@ -7,6 +7,6 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "postgres://<username>:<password>@<host>:<port>/<database-name>"
+    "DATABASE_URL": "postgresql://snuffleupagus.db.elephantsql.com/xqppfgop"
   }
 }
