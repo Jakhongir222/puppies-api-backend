@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "dependencies": {
+    "@vercel/java": "latest"
+  },
   "builds": [
     {
       "src": "*.jar",
