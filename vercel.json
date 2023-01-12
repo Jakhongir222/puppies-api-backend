@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.jar",
+      "use": "@vercel/java"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "postgres://<username>:<password>@<host>:<port>/<database-name>"
+  }
+}
